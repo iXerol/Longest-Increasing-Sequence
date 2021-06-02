@@ -11,11 +11,11 @@
 		84F3DF1C2668057700CE1974 /* HorizontalList.h in Headers */ = {isa = PBXBuildFile; fileRef = 849E3D7320942DB300D97456 /* HorizontalList.h */; };
 		84F3DF1D2668058100CE1974 /* node.h in Headers */ = {isa = PBXBuildFile; fileRef = 849E3D7220942BE700D97456 /* node.h */; };
 		84F3DF1E2668058300CE1974 /* QuadrupleList.h in Headers */ = {isa = PBXBuildFile; fileRef = 849E3D74209432F300D97456 /* QuadrupleList.h */; };
-		84F3DF202668059700CE1974 /* libLISLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F3DF112668056500CE1974 /* libLISLibrary.a */; };
+		84F3DF2326680C3A00CE1974 /* libLISLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F3DF112668056500CE1974 /* libLISLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		84F3DF212668059700CE1974 /* PBXContainerItemProxy */ = {
+		84F3DF2426680C3A00CE1974 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 849E3D6020942A6A00D97456 /* Project object */;
 			proxyType = 1;
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F3DF202668059700CE1974 /* libLISLibrary.a in Frameworks */,
+				84F3DF2326680C3A00CE1974 /* libLISLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				84F3DF222668059700CE1974 /* PBXTargetDependency */,
+				84F3DF2526680C3A00CE1974 /* PBXTargetDependency */,
 			);
 			name = LIS;
 			productName = LIS;
@@ -213,10 +213,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		84F3DF222668059700CE1974 /* PBXTargetDependency */ = {
+		84F3DF2526680C3A00CE1974 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84F3DF102668056500CE1974 /* LISLibrary */;
-			targetProxy = 84F3DF212668059700CE1974 /* PBXContainerItemProxy */;
+			targetProxy = 84F3DF2426680C3A00CE1974 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

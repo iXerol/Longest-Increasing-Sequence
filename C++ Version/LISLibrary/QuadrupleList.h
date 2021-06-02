@@ -39,17 +39,18 @@ void QuadrupleList::push_back(int *sequence, int i) {
 		lists.emplace_back(maxLength);
 		n = lists.back().emplace_back(i, data);
 	} else {
-		int start = -1;
-		int end = lists.size() - 1;	// range is (start, end]
+		// binary search
+		size_t start = 0;
+		size_t end = lists.size();	// range is [start, end)
 		while (end - start > 1) {
-			int middle = (start + end) / 2;
-			if (data > lists[middle].tail->data) {
-				start = middle;
-			} else if (data <= lists[middle].tail->data) {
+			size_t middle = start + (end - start) / 2;
+			if (data < lists[middle].tail->data) {
 				end = middle;
+			} else {
+				start = middle;
 			}
 		}
-		n = lists[end].emplace_back(i, data);
+		n = lists[start].emplace_back(i, data);
 	}
 	if (n->risingLength > 1) {
 		n->upNeighbor = lists[n->risingLength - 2].tail;
