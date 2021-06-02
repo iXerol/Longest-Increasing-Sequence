@@ -8,7 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		849E3D6C20942A6A00D97456 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849E3D6B20942A6A00D97456 /* main.cpp */; };
+		84F3DF1C2668057700CE1974 /* HorizontalList.h in Headers */ = {isa = PBXBuildFile; fileRef = 849E3D7320942DB300D97456 /* HorizontalList.h */; };
+		84F3DF1D2668058100CE1974 /* node.h in Headers */ = {isa = PBXBuildFile; fileRef = 849E3D7220942BE700D97456 /* node.h */; };
+		84F3DF1E2668058300CE1974 /* QuadrupleList.h in Headers */ = {isa = PBXBuildFile; fileRef = 849E3D74209432F300D97456 /* QuadrupleList.h */; };
+		84F3DF202668059700CE1974 /* libLISLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F3DF112668056500CE1974 /* libLISLibrary.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84F3DF212668059700CE1974 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849E3D6020942A6A00D97456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F3DF102668056500CE1974;
+			remoteInfo = LISLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		849E3D6620942A6A00D97456 /* CopyFiles */ = {
@@ -26,12 +40,21 @@
 		849E3D6820942A6A00D97456 /* LIS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LIS; sourceTree = BUILT_PRODUCTS_DIR; };
 		849E3D6B20942A6A00D97456 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		849E3D7220942BE700D97456 /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
-		849E3D7320942DB300D97456 /* horizontal list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "horizontal list.h"; sourceTree = "<group>"; };
-		849E3D74209432F300D97456 /* quadruple list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "quadruple list.h"; sourceTree = "<group>"; };
+		849E3D7320942DB300D97456 /* HorizontalList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalList.h; sourceTree = "<group>"; };
+		849E3D74209432F300D97456 /* QuadrupleList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadrupleList.h; sourceTree = "<group>"; };
+		84F3DF112668056500CE1974 /* libLISLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLISLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		849E3D6520942A6A00D97456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F3DF202668059700CE1974 /* libLISLibrary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F3DF0F2668056500CE1974 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,7 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				849E3D6A20942A6A00D97456 /* LIS */,
+				84F3DF122668056500CE1974 /* LISLibrary */,
 				849E3D6920942A6A00D97456 /* Products */,
+				84F3DF1F2668059700CE1974 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				849E3D6820942A6A00D97456 /* LIS */,
+				84F3DF112668056500CE1974 /* libLISLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,14 +87,41 @@
 			isa = PBXGroup;
 			children = (
 				849E3D6B20942A6A00D97456 /* main.cpp */,
-				849E3D7220942BE700D97456 /* node.h */,
-				849E3D7320942DB300D97456 /* horizontal list.h */,
-				849E3D74209432F300D97456 /* quadruple list.h */,
 			);
 			path = LIS;
 			sourceTree = "<group>";
 		};
+		84F3DF122668056500CE1974 /* LISLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				849E3D7220942BE700D97456 /* node.h */,
+				849E3D7320942DB300D97456 /* HorizontalList.h */,
+				849E3D74209432F300D97456 /* QuadrupleList.h */,
+			);
+			path = LISLibrary;
+			sourceTree = "<group>";
+		};
+		84F3DF1F2668059700CE1974 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		84F3DF0D2668056500CE1974 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F3DF1C2668057700CE1974 /* HorizontalList.h in Headers */,
+				84F3DF1E2668058300CE1974 /* QuadrupleList.h in Headers */,
+				84F3DF1D2668058100CE1974 /* node.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		849E3D6720942A6A00D97456 /* LIS */ = {
@@ -82,11 +135,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				84F3DF222668059700CE1974 /* PBXTargetDependency */,
 			);
 			name = LIS;
 			productName = LIS;
 			productReference = 849E3D6820942A6A00D97456 /* LIS */;
 			productType = "com.apple.product-type.tool";
+		};
+		84F3DF102668056500CE1974 /* LISLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F3DF192668056500CE1974 /* Build configuration list for PBXNativeTarget "LISLibrary" */;
+			buildPhases = (
+				84F3DF0D2668056500CE1974 /* Headers */,
+				84F3DF0E2668056500CE1974 /* Sources */,
+				84F3DF0F2668056500CE1974 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LISLibrary;
+			productName = LISLibrary;
+			productReference = 84F3DF112668056500CE1974 /* libLISLibrary.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +170,9 @@
 				TargetAttributes = {
 					849E3D6720942A6A00D97456 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					84F3DF102668056500CE1974 = {
+						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
@@ -115,6 +189,7 @@
 			projectRoot = "";
 			targets = (
 				849E3D6720942A6A00D97456 /* LIS */,
+				84F3DF102668056500CE1974 /* LISLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +203,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F3DF0E2668056500CE1974 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84F3DF222668059700CE1974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F3DF102668056500CE1974 /* LISLibrary */;
+			targetProxy = 84F3DF212668059700CE1974 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		849E3D6D20942A6A00D97456 /* Debug */ = {
@@ -258,6 +348,39 @@
 			};
 			name = Release;
 		};
+		84F3DF1A2668056500CE1974 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52892NMS89;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		84F3DF1B2668056500CE1974 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52892NMS89;
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +398,15 @@
 			buildConfigurations = (
 				849E3D7020942A6A00D97456 /* Debug */,
 				849E3D7120942A6A00D97456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F3DF192668056500CE1974 /* Build configuration list for PBXNativeTarget "LISLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F3DF1A2668056500CE1974 /* Debug */,
+				84F3DF1B2668056500CE1974 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

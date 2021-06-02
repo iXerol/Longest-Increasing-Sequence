@@ -7,12 +7,12 @@
 //
 
 #include <iostream>
-#include "quadruple list.h"
+#include "QuadrupleList.h"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
 	int t[10] = {3, 9, 6, 2, 8, 5, 7, 10};
-	quadrupleList q(t, 7);
+	QuadrupleList q(t, 7);
 	q.printLongestIncreasingSequence();
 	q.update(t, 7);
 	cout << endl;

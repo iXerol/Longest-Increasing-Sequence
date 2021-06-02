@@ -11,13 +11,13 @@
 
 #include "node.h"
 
-class horizontalList {
+class HorizontalList {
 public:
 	int risingLength;
 	node* head = NULL;
 	node* tail = NULL;
 	
-	horizontalList(int length) {
+	HorizontalList(int length) {
 		risingLength = length;
 	}
 	
@@ -28,7 +28,7 @@ public:
 	bool empty();
 };
 
-node *horizontalList::push_back(node *item) {
+node * HorizontalList::push_back(node *item) {
 	if (!empty()) {
 		tail->rightNeighbor = item;
 		item->leftNeighbor = tail;
@@ -39,13 +39,13 @@ node *horizontalList::push_back(node *item) {
 	return tail;
 }
 
-node *horizontalList::emplace_back(int index, int data) {
+node * HorizontalList::emplace_back(int index, int data) {
 	node* item = new node(index, data, risingLength);
 	push_back(item);
 	return tail;
 }
 
-bool horizontalList::empty() {
+bool HorizontalList::empty() {
 	if (tail == NULL) {
 		return true;
 	}

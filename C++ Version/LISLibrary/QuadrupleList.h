@@ -9,13 +9,13 @@
 #ifndef quadruple_list_h
 #define quadruple_list_h
 
-#include "horizontal list.h"
+#include "HorizontalList.h"
 #include <vector>
 #include <iostream>
 
-class quadrupleList {
+class QuadrupleList {
 private:
-	std::vector<horizontalList> lists;
+	std::vector<HorizontalList> lists;
 	int maxLength = 0;
 	
 	void longestIncreasingSequence(std::vector<int>& v, node* n);
@@ -24,31 +24,14 @@ private:
 	
 	void push_back(int* sequence, int i);
 public:
-	quadrupleList(int* sequence, int num);
+	QuadrupleList(int* sequence, int num);
 	
 	void printLongestIncreasingSequence();
 
 	void update(int* sequence, int i);
-	
-//	void output() {
-//		for (auto list: lists) {
-//			for (node* n = list.head; n != NULL; n = n->rightNeighbor) {
-//				std::cout << n->data << '(' << n->index << ") ";
-//			}
-//			std:: cout << std::endl;
-//		}
-//		for (auto list: lists) {
-//			for (node* n = list.head; n != NULL; n = n->rightNeighbor) {
-//				if (n->upNeighbor != NULL)
-//					std::cout << n->index << " up " << n->upNeighbor->index << std::endl;
-//				if (n->downNeighbor != NULL)
-//					std::cout << n->index << " down " << n->downNeighbor->index << std::endl;
-//			}
-//		}
-//	}
 };
 
-void quadrupleList::push_back(int *sequence, int i) {
+void QuadrupleList::push_back(int *sequence, int i) {
 	int data = sequence[i];
 	node* n;
 	if (lists.size() == 0 || data > lists.back().tail->data) {
@@ -76,13 +59,13 @@ void quadrupleList::push_back(int *sequence, int i) {
 	}
 }
 
-quadrupleList::quadrupleList(int *sequence, int num) {
+QuadrupleList::QuadrupleList(int *sequence, int num) {
 	for (int i = 0; i < num; ++i) {
 		push_back(sequence, i);
 	}
 }
 
-void quadrupleList::longestIncreasingSequence(std::vector<int> &v, node *n) {
+void QuadrupleList::longestIncreasingSequence(std::vector<int> &v, node *n) {
 	v.push_back(n->data);
 	if (n->risingLength == 1) {
 		for (auto i = v.size(); i > 0; --i) {
@@ -98,16 +81,16 @@ void quadrupleList::longestIncreasingSequence(std::vector<int> &v, node *n) {
 	}
 }
 
-void quadrupleList::printLongestIncreasingSequence() {
+void QuadrupleList::printLongestIncreasingSequence() {
 	std::vector<int> v;
 	if (maxLength != 0) {
 		longestIncreasingSequence(v, lists.back().tail);
 	}
 }
 
-void quadrupleList::pop_top() {
+void QuadrupleList::pop_top() {
 	//divide
-	std::vector<horizontalList> left, right;
+	std::vector<HorizontalList> left, right;
 	left.emplace_back(1);
 	left[0].head = left[0].tail = lists[0].head;
 	right.emplace_back(1);
@@ -196,7 +179,7 @@ void quadrupleList::pop_top() {
 	}
 }
 
-void quadrupleList::update(int *sequence, int i) {
+void QuadrupleList::update(int *sequence, int i) {
 	pop_top();
 	push_back(sequence, i);
 }
