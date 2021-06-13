@@ -77,7 +77,7 @@ void QuadrupleList::longestIncreasingSequence(std::vector<int> &v, node *n) {
 		longestIncreasingSequence(v, n->upNeighbor);
 	}
 	v.pop_back();
-	if (n->leftNeighbor != NULL && (v.empty() || n->leftNeighbor->data < v.back())) {
+	if (n->leftNeighbor != nullptr && (v.empty() || n->leftNeighbor->data < v.back())) {
 		longestIncreasingSequence(v, n->leftNeighbor);
 	}
 }
@@ -96,7 +96,7 @@ void QuadrupleList::pop_top() {
 	left[0].head = left[0].tail = lists[0].head;
 	right.emplace_back(1);
 	right[0].head = left[0].tail->rightNeighbor;
-	if (right[0].head != NULL) {
+	if (right[0].head != nullptr) {
 		right[0].tail = lists[0].tail;
 	}
 	for (int i = 1; i < maxLength; ++i) {
@@ -105,7 +105,7 @@ void QuadrupleList::pop_top() {
 		if (right[i - 1].empty() || right[i - 1].head->downNeighbor == lists[i].tail) {
 			left[i].head = lists[i].head;
 			left[i].tail = lists[i].tail;
-		} else if (left[i - 1].empty() || right[i - 1].head->downNeighbor == NULL) {
+		} else if (left[i - 1].empty() || right[i - 1].head->downNeighbor == nullptr) {
 			right[i].head = lists[i].head;
 			right[i].tail = lists[i].tail;
 		} else {
@@ -119,9 +119,9 @@ void QuadrupleList::pop_top() {
 	delete left[0].head;
 	for (int i = 0; i < maxLength - 1; ++i) {
 		if (left[i + 1].empty()) {
-			right[i].head->leftNeighbor = NULL;
+			right[i].head->leftNeighbor = nullptr;
 		} else if (right[i].empty()) {
-			left[i + 1].tail->rightNeighbor = NULL;
+			left[i + 1].tail->rightNeighbor = nullptr;
 		} else {
 			left[i + 1].tail->rightNeighbor = right[i].head;
 			right[i].head->leftNeighbor = left[i + 1].tail;
@@ -135,7 +135,7 @@ void QuadrupleList::pop_top() {
 			lists[i].tail = left[i + 1].tail;
 		}
 	}
-	right[maxLength - 1].head->leftNeighbor = NULL;
+	right[maxLength - 1].head->leftNeighbor = nullptr;
 	lists[maxLength - 1].head = right[maxLength - 1].head;
 	lists[maxLength - 1].tail = right[maxLength - 1].tail;
 	if (lists[maxLength - 1].empty()) {
@@ -146,37 +146,37 @@ void QuadrupleList::pop_top() {
 	for (int i = 1; i < maxLength && !left[i].empty(); ++i) {
 		node* n1 = left[i].tail;
 		node* n2 = left[i - 1].tail;
-		while(n1 != NULL && n1->leftNeighbor != NULL && n1->leftNeighbor->upNeighbor == n2){
+		while(n1 != nullptr && n1->leftNeighbor != nullptr && n1->leftNeighbor->upNeighbor == n2){
 			n1 = n1->leftNeighbor;
 		}
-		while (n1 != NULL && n1->leftNeighbor != left[i].tail) {
-			while(n2->rightNeighbor != NULL && n2->rightNeighbor->index < n1->index) {
+		while (n1 != nullptr && n1->leftNeighbor != left[i].tail) {
+			while(n2->rightNeighbor != nullptr && n2->rightNeighbor->index < n1->index) {
 				n2 = n2->rightNeighbor;
 			}
 			n1->upNeighbor = n2;
 			n1 = n1->rightNeighbor;
 		}
 	}
-	for (node* n = left[1].head; n != NULL && n->leftNeighbor != left[1].tail; n = n->rightNeighbor) {
-		n->upNeighbor = NULL;
+	for (node* n = left[1].head; n != nullptr && n->leftNeighbor != left[1].tail; n = n->rightNeighbor) {
+		n->upNeighbor = nullptr;
 	}
 	//change RIGHT's down neighbors
 	for (int i = 0; i < maxLength - 2 && !right[i].empty() && !left[i + 1].empty(); ++i) {
 		node* n1 = right[i].head;
 		node* n2 = left[i + 2].tail;
-		while(n1 != NULL && n1->rightNeighbor != NULL && n1->rightNeighbor->downNeighbor == left[i + 1].tail){
+		while(n1 != nullptr && n1->rightNeighbor != nullptr && n1->rightNeighbor->downNeighbor == left[i + 1].tail){
 			n1 = n1->rightNeighbor;
 		}
-		while (n1 != NULL && n1->rightNeighbor != right[i].head) {
-			while(n2 != NULL && n2->index > n1->index) {
+		while (n1 != nullptr && n1->rightNeighbor != right[i].head) {
+			while(n2 != nullptr && n2->index > n1->index) {
 				n2 = n2->leftNeighbor;
 			}
 			n1->downNeighbor = n2;
 			n1 = n1->leftNeighbor;
 		}
 	}
-	for (node* n = right[maxLength - 2].head; n != NULL && n->downNeighbor == left[maxLength - 1].tail; n = n->rightNeighbor) {
-		n->downNeighbor = NULL;
+	for (node* n = right[maxLength - 2].head; n != nullptr && n->downNeighbor == left[maxLength - 1].tail; n = n->rightNeighbor) {
+		n->downNeighbor = nullptr;
 	}
 }
 

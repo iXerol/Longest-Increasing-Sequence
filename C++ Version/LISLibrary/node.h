@@ -14,10 +14,10 @@ public:
 	int data;
 	int index;
 	int risingLength;
-	node* leftNeighbor = NULL;
-	node* rightNeighbor = NULL;
-	node* upNeighbor = NULL;
-	node* downNeighbor = NULL;
+	node* leftNeighbor = nullptr;
+	node* rightNeighbor = nullptr;
+	node* upNeighbor = nullptr;
+	node* downNeighbor = nullptr;
 	
 	node(int i, int d, int r) {
 		index = i;
@@ -34,7 +34,7 @@ public:
 
 node *node::un(int t) {
 	if (t < 0 || t >= risingLength) {
-		return NULL;
+		return nullptr;
 	} else if (t == 0) {
 		return this;
 	} else {

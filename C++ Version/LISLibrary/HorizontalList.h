@@ -14,8 +14,8 @@
 class HorizontalList {
 public:
 	int risingLength;
-	node* head = NULL;
-	node* tail = NULL;
+	node* head = nullptr;
+	node* tail = nullptr;
 	
 	HorizontalList(int length) {
 		risingLength = length;
@@ -46,7 +46,7 @@ node * HorizontalList::emplace_back(int index, int data) {
 }
 
 bool HorizontalList::empty() {
-	if (tail == NULL) {
+	if (tail == nullptr) {
 		return true;
 	}
 	else {
