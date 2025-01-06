@@ -6,8 +6,7 @@
 //  Copyright © 2018 Xerol Wong. All rights reserved.
 //
 
-#ifndef horizontal_list_h
-#define horizontal_list_h
+#pragma once
 
 #include "node.h"
 
@@ -53,5 +52,3 @@ bool HorizontalList::empty() {
 		return false;
 	}
 }
-
-#endif /* horizontal_list_h */

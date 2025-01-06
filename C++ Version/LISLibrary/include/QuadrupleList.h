@@ -6,8 +6,7 @@
 //  Copyright © 2018 Xerol Wong. All rights reserved.
 //
 
-#ifndef quadruple_list_h
-#define quadruple_list_h
+#pragma once
 
 #include "HorizontalList.h"
 #include <vector>
@@ -184,6 +183,3 @@ void QuadrupleList::update(int *sequence, int i) {
 	pop_top();
 	push_back(sequence, i);
 }
-
-
-#endif /* quadruple_list_h */

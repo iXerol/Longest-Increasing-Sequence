@@ -6,8 +6,7 @@
 //  Copyright © 2018 Xerol Wong. All rights reserved.
 //
 
-#ifndef node_h
-#define node_h
+#pragma once
 
 struct node {
 public:
@@ -49,5 +48,3 @@ bool node::operator>(node &item) {
 bool node::operator<(node &item) {
 	return data < item.data;
 }
-
-#endif /* node_h */
