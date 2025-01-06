@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "bazel build //C++ Version/LIS:lis_cpp",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build all targets using Bazel"
+        },
+        {
+            "label": "debug",
+            "type": "shell",
+            "command": "bazel build //C++ Version/LIS:lis_cpp",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build all targets using Bazel for debugging",
+            "dependsOn": "build"
+        }
+    ]
+}
