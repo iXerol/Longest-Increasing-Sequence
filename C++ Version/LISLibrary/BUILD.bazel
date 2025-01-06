@@ -1,0 +1,10 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "lis_library_cpp",
+	srcs = glob(["*.cpp"]),
+	hdrs = glob(["include/*.h"]),
+	visibility = ["//visibility:public"],
+	includes = ["include"],
+	copts = ["-std=c++23"],
+)
