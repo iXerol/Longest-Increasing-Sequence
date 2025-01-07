@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build library
+        run: bazel build //C++ Version/LISLibrary:lis_library_cpp
+
+      # 測試項目（如果有測試）
+      - name: Build binary
+        run: bazel build //C++ Version/LIS:lis_library_cpp
