@@ -3,10 +3,11 @@ name: Build
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,8 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build library
-        run: bazel build //C++ Version/LISLibrary:lis_library_cpp
+        run: bazel build //C++\ Version/LISLibrary:lis_library_cpp
 
-      # 測試項目（如果有測試）
       - name: Build binary
-        run: bazel build //C++ Version/LIS:lis_library_cpp
+        run: bazel build //C++\ Version/LIS:lis_cpp
