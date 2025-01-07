@@ -1,0 +1,11 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_binary(
+    name = "lis_cpp",
+	srcs = ["main.cpp"],
+	visibility = ["//visibility:public"],
+	deps = [
+		"//C++ Version/LISLibrary:lis_library_cpp",
+	],
+	copts = ["-std=c++23"],
+)
